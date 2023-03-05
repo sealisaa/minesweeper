@@ -36,12 +36,11 @@ class Game extends React.Component {
                     flag: false,
                     opened: false,
                     bombsCount: 0,
-                    neighbors: []
+                    neighbors: [],
+                    lost: false
                 };
             }
         }
-        startCellRow = -1;
-        startCellColumn = -1;
         cellsLeft = rows * columns - mines;
         this.setState({
             flagsCount: 0,
@@ -50,15 +49,11 @@ class Game extends React.Component {
     }
 
     placeMines = () => {
-        this.clearField();
         let i = 0;
         while (i < mines) {
             let row = this.getRandomInt(rows);
-            if (row === startCellRow) {
-                continue;
-            }
             let column = this.getRandomInt(columns);
-            if (column === startCellColumn) {
+            if (row === startCellRow && column === startCellColumn) {
                 continue;
             }
             if (!cells[row][column].mine) {
@@ -185,6 +180,7 @@ class Game extends React.Component {
 
     clickCell(i, j, isFirstClick) {
         if (cells[i][j].mine && !isFirstClick) {
+            cells[i][j].lost = true;
             this.stopGame();
             this.setState({lose: true});
         } else {
@@ -216,6 +212,9 @@ class Game extends React.Component {
 
     cellOnClickRight = (e, i, j) => {
         e.preventDefault();
+        if (this.state.gameState !== "started") {
+            return;
+        }
         let cell = cells[i][j];
         if (cell.opened) {
             return;
@@ -301,10 +300,18 @@ class Game extends React.Component {
                                     className = "cell cell-opened";
                                 }
                                 if (cell.flag) {
-                                    className = "cell flag";
+                                    if (!cell.mine && this.state.gameState === "notStarted") {
+                                        className = "cell bomb-crossed";
+                                    } else {
+                                        className = "cell flag";
+                                    }
                                 } else if (cell.mine) {
                                     if (this.state.gameState === "notStarted") {
-                                        className = "cell bomb";
+                                        if (cell.lost) {
+                                            className = "cell bomb-red";
+                                        } else {
+                                            className = "cell bomb";
+                                        }
                                     }
                                 } else if (cell.bombsCount > 0 && cell.opened) {
                                     className = "cell num" + cell.bombsCount;
