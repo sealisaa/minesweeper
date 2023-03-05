@@ -1,0 +1,222 @@
+.game {
+    width: 256px;
+    margin: 16px;
+    background-color: #c0c0c0;
+    padding: 8px;
+}
+
+.cell:hover {
+    cursor: pointer;
+}
+
+.digit0 {
+    width: 13px;
+    height: 23px;
+    background: url('../img/minesweeper-sprites.png') 14px 0;
+}
+
+.digit1 {
+    width: 13px;
+    height: 23px;
+    background: url('../img/minesweeper-sprites.png') 0 0;
+}
+
+.digit2 {
+    width: 13px;
+    height: 23px;
+    background: url('../img/minesweeper-sprites.png') -14px 0;
+}
+
+.digit3 {
+    width: 13px;
+    height: 23px;
+    background: url('../img/minesweeper-sprites.png') -28px 0;
+}
+
+.digit4 {
+    width: 13px;
+    height: 23px;
+    background: url('../img/minesweeper-sprites.png') -42px 0;
+}
+
+.digit5 {
+    width: 13px;
+    height: 23px;
+    background: url('../img/minesweeper-sprites.png') -56px 0;
+}
+
+.digit6 {
+    width: 13px;
+    height: 23px;
+    background: url('../img/minesweeper-sprites.png') -70px 0;
+}
+
+.digit7 {
+    width: 13px;
+    height: 23px;
+    background: url('../img/minesweeper-sprites.png') -84px 0;
+}
+
+.digit8 {
+    width: 13px;
+    height: 23px;
+    background: url('../img/minesweeper-sprites.png') -98px 0;
+}
+
+.digit9 {
+    width: 13px;
+    height: 23px;
+    background: url('../img/minesweeper-sprites.png') -112px 0;
+}
+
+.smile {
+    width: 26px;
+    height: 26px;
+    background: url('../img/minesweeper-sprites.png') 0 -24px;
+}
+
+.smile:hover {
+    cursor: pointer;
+}
+
+.smile-clicked {
+    width: 26px;
+    height: 26px;
+    background: url('../img/minesweeper-sprites.png') -27px -24px;
+}
+
+.smile-surprised {
+    width: 26px;
+    height: 26px;
+    background: url('../img/minesweeper-sprites.png') -54px -24px;
+}
+
+.smile-glasses {
+    width: 26px;
+    height: 26px;
+    background: url('../img/minesweeper-sprites.png') -81px -24px;
+}
+
+.smile-dead {
+    width: 26px;
+    height: 26px;
+    background: url('../img/minesweeper-sprites.png') -108px -24px;
+}
+
+.cell-simple {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') 0 -51px;
+}
+
+.cell-opened {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -17px -51px;
+}
+
+.flag {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -34px -51px;
+}
+
+.question {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -51px -51px;
+}
+
+.question-clicked {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -68px -51px;
+}
+
+.bomb {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -85px -51px;
+}
+
+.bomb-red {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -102px -51px;
+}
+
+.bomb-crossed {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -119px -51px;
+}
+
+.num1 {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') 0 -68px;
+}
+
+.num2 {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -17px -68px;
+}
+
+.num3 {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -34px -68px;
+}
+
+.num4 {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -51px -68px;
+}
+
+.num5 {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -68px -68px;
+}
+
+.num6 {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -85px -68px;
+}
+
+.num7 {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -102px -68px;
+}
+
+.num8 {
+    width: 16px;
+    height: 16px;
+    background: url('../img/minesweeper-sprites.png') -119px -68px;
+}
+
+.game__field-row, .game__timer, .game__flags-count, .game__header {
+    display: flex;
+    flex-direction: row;
+}
+
+.game__field {
+    border-left: solid #808080 2px;
+    border-top: solid #808080 2px;
+    border-right: solid #ffffff 2px;
+    border-bottom: solid #ffffff 2px;
+}
+
+.game__header {
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding: 4px;
+    border-left: solid #808080 2px;
+    border-top: solid #808080 2px;
+    border-right: solid #ffffff 2px;
+    border-bottom: solid #ffffff 2px;
+}
