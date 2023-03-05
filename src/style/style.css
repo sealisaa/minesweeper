@@ -3,6 +3,10 @@
     margin: 16px;
     background-color: #c0c0c0;
     padding: 8px;
+    border-left: solid #ffffff 2px;
+    border-top: solid #ffffff 2px;
+    border-right: solid #808080 2px;
+    border-bottom: solid #808080 2px;
 }
 
 .cell:hover {
